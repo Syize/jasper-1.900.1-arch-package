@@ -27,7 +27,7 @@ install=
 changelog=
 source=("${pkgname2}-${pkgver}.tar.gz::https://github.com/Syize/jasper/archive/refs/tags/v1.900.2.tar.gz")
 noextract=()
-sha256sums=(SKIP)
+sha256sums=('13f3cab84cc216667030969a68239e2cc806e6445f3a99cf6e76b78bfa5b6162')
 validpgpkeys=()
 
 prepare() {

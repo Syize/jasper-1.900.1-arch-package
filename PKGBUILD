@@ -6,7 +6,7 @@
 # Maintainer: Syize <syizeliu@gmail.com>
 pkgname='jasper-1.900.1'
 pkgname2='jasper'
-pkgver=1.900.1
+pkgver=1
 pkgrel=1
 epoch=
 pkgdesc="Self-used jasper to build WRF model."
@@ -35,16 +35,16 @@ prepare() {
 }
 
 build() {
-	cd "${pkgname2}-${pkgver}"
-	./configure --prefix=/usr --enable-shared=yes --libdir=/usr/lib/jasper-1.900.1 CFLAGS="-fpermissive"
+	cd "${pkgname2}-1.900.2"
+	./configure --prefix=/usr --enable-shared=yes --libdir=/usr/lib/jasper-1.900.1 --includedir=/usr/include/jasper-1.900.1 CFLAGS="-fpermissive"
 	make
 }
 
 check() {
-	cd "${pkgname2}-${pkgver}"
+	cd "${pkgname2}-1.900.2"
 }
 
 package() {
-	cd "${pkgname2}-${pkgver}"
+	cd "${pkgname2}-1.900.2"
 	make DESTDIR="$pkgdir/" install
 }

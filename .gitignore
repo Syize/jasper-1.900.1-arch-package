@@ -1,0 +1,8 @@
+build/
+pkg/
+src/
+test/
+.vscode/
+
+*.tar.gz
+*.zst
